@@ -1,3 +1,4 @@
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -12,11 +13,11 @@ spec:
       labels:
         app: bloggingapp
     spec:
-     containers:
-  - name: bloggingapp
-    image: saifulchowdhury/bloggingapp2:latest
-    imagePullPolicy: Always
-    ports:
+      containers:
+        - name: bloggingapp
+          image: saifulchowdhury/bloggingapp2:latest
+          imagePullPolicy: Always
+          ports:
             - containerPort: 8080
       imagePullSecrets:
         - name: regcred # Reference to the Docker registry secret
@@ -31,5 +32,5 @@ spec:
   ports:
     - protocol: "TCP"
       port: 80
-      targetPort: 8080 
+      targetPort: 8080
   type: LoadBalancer
