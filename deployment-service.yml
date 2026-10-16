@@ -12,11 +12,11 @@ spec:
       labels:
         app: bloggingapp
     spec:
-      containers:
-        - name: bloggingapp
-          image: adijaiswal/bloggingapp:latest # Updated image to private DockerHub image
-          imagePullPolicy: Always
-          ports:
+     containers:
+  - name: bloggingapp
+    image: saifulchowdhury/bloggingapp2:latest
+    imagePullPolicy: Always
+    ports:
             - containerPort: 8080
       imagePullSecrets:
         - name: regcred # Reference to the Docker registry secret
