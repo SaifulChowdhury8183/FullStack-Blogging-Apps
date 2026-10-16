@@ -99,15 +99,18 @@
 		</plugins>
 	</build>
 	
-	<distributionManagement>
-        <repository>
-            <id>Releases</id>
-            <url>http://13.235.245.200:8081/repository/maven-releases/</url>
-        </repository>
-        <snapshotRepository>
-            <id>maven-snapshots</id>
-            <url>http://13.235.245.200:8081/repository/maven-snapshots/</url>
-        </snapshotRepository>
-    </distributionManagement>
+
+<distributionManagement>
+    <repository>
+        <id>Releases</id>
+        <url>http://18.219.107.198:8081/nexus/content/repositories/releases/</url>
+    </repository>
+
+    <snapshotRepository>
+        <id>maven-snapshots</id>
+        <url>http://18.219.107.198:8081/nexus/content/repositories/snapshots/</url>
+    </snapshotRepository>
+</distributionManagement>
+
 
 </project>
